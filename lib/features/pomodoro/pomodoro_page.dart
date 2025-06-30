@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:multitool/routes/routes.dart';
+import 'package:multitool/widgets/bottom_nav_bar.dart';
 
 class PomodoroPage extends StatefulWidget {
   const PomodoroPage({super.key});
@@ -96,6 +97,7 @@ class _PomodoroPageState extends State<PomodoroPage> {
           },
         ),
       ),
+      
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -210,7 +212,10 @@ class _PomodoroPageState extends State<PomodoroPage> {
             ),
           ],
         ),
+        
       ),
+      bottomNavigationBar: const AppBottomNavBar(currentIndex: 1),
+      
     );
   }
 }

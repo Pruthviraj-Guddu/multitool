@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:multitool/routes/routes.dart';
+import 'package:multitool/widgets/bottom_nav_bar.dart';
 
 class CompassPage extends StatelessWidget {
   const CompassPage({super.key});
@@ -24,6 +25,7 @@ class CompassPage extends StatelessWidget {
       body: const Center(
         child: Text('Compass Tool - Implementation coming soon'),
       ),
+      bottomNavigationBar: const AppBottomNavBar(currentIndex: 2),
     );
   }
 }
