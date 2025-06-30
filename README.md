@@ -24,6 +24,7 @@ cd android
 ./gradlew clean
 cd ..
 flutter clean
+
 flutter pub get
 flutter run
 cd android
