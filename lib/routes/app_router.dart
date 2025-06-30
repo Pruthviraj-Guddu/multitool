@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:multitool/features/compass/compass_page.dart';
 import 'package:multitool/features/pomodoro/pomodoro_page.dart';
 import 'package:multitool/routes/routes.dart';
 import 'package:multitool/home_page.dart';
@@ -12,15 +13,20 @@ class AppRouter {
         builder: (BuildContext context, GoRouterState state) {
           return const HomePage();
         },
-        routes: <RouteBase>[
-          GoRoute(
-            path: Routes.pomodoro,
-            name: Routes.pomodoro,
-            builder: (BuildContext context, GoRouterState state) {
-              return const PomodoroPage();
-            },
-          ),
-        ],
+      ),
+      GoRoute(
+        path: Routes.pomodoro,
+        name: 'pomodoro',
+        builder: (BuildContext context, GoRouterState state) {
+          return const PomodoroPage();
+        },
+      ),
+      GoRoute(
+        path: Routes.compass,
+        name: 'compass',
+        builder: (BuildContext context, GoRouterState state) {
+          return const CompassPage();
+        },
       ),
     ],
     errorBuilder: (BuildContext context, GoRouterState state) {
@@ -30,6 +36,5 @@ class AppRouter {
         ),
       );
     },
-    debugLogDiagnostics: true,
   );
 }

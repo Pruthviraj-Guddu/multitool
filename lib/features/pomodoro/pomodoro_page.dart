@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:multitool/routes/routes.dart';
 
 class PomodoroPage extends StatefulWidget {
   const PomodoroPage({super.key});
@@ -58,7 +60,7 @@ class _PomodoroPageState extends State<PomodoroPage> {
 
     Future.delayed(const Duration(seconds: 1), () {
       if (!mounted) return;
-      
+
       setState(() {
         if (_secondsRemaining > 0) {
           _secondsRemaining--;
@@ -85,7 +87,13 @@ class _PomodoroPageState extends State<PomodoroPage> {
         title: const Text('Pomodoro Timer'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: () {
+            if (context.canPop()) {
+              context.pop();
+            } else {
+              context.go(Routes.home);
+            }
+          },
         ),
       ),
       body: Center(
@@ -130,8 +138,8 @@ class _PomodoroPageState extends State<PomodoroPage> {
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
-                    const Text('Timer Settings', 
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                    const Text('Timer Settings',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
