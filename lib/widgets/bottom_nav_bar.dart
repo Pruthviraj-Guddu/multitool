@@ -28,7 +28,6 @@ class AppBottomNavBar extends StatelessWidget {
             context.go(Routes.compass);
             break;
           case 2:
-          log('case 2 profile');
             context.go(Routes.profile);
             break;
         }

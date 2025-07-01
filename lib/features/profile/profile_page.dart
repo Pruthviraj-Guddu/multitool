@@ -10,6 +10,31 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+
+  void _launchPrivacyPolicy() async {
+    final Uri url = Uri.parse(
+      'https://pruthviraj-guddu.github.io/multitool/privacyPolicy.html',
+    );
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  void _launchTermsAndConditions() async {
+    final Uri url = Uri.parse(
+      'https://pruthviraj-guddu.github.io/multitool/termsAndCondition.html',
+    );
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+
+
   void _showLegalDialog(BuildContext context, String title, String content) {
     showDialog(
       context: context,
@@ -50,10 +75,12 @@ class _ProfilePageState extends State<ProfilePage> {
             // const SizedBox(height: 10),
             // const Text('user@example.com'),
             const SizedBox(height: 40),
+            
             SizedBox(
               width: 200,
               child: SizedBox(
                 width: 200,
+                
                 child: ElevatedButton(
                   onPressed: _launchPrivacyPolicy,
                   child: const Text('Privacy Policy'),
@@ -74,16 +101,24 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(height: 20),
             SizedBox(
               width: 200,
+              child: 
+              SizedBox(
+              width: 200,
               child: ElevatedButton(
-                onPressed: () {
-                  _showLegalDialog(
-                    context,
-                    'Terms & Conditions',
-                    'Terms and conditions content will be loaded here. You can replace this with your HTML content later.',
-                  );
-                },
+                onPressed: _launchTermsAndConditions,
                 child: const Text('Terms & Conditions'),
               ),
+            ),
+              // ElevatedButton(
+              //   onPressed: () {
+              //     _showLegalDialog(
+              //       context,
+              //       'Terms & Conditions',
+              //       'Terms and conditions content will be loaded here. You can replace this with your HTML content later.',
+              //     );
+              //   },
+              //   child: const Text('Terms & Conditions'),
+              // ),
             ),
           ],
         ),
@@ -92,14 +127,5 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 
-  void _launchPrivacyPolicy() async {
-    final Uri url = Uri.parse(
-      'https://pruthviraj-guddu.github.io/multitool/privacyPolicy.html',
-    );
-    if (await canLaunchUrl(url)) {
-      await launchUrl(url, );
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
+  
 }
