@@ -33,9 +33,23 @@ class _CompassPageState extends State<CompassPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.brown[600],
+        appBar: AppBar(
+        title: const Text('Compass'),
+        // leading: IconButton(
+        //   icon: const Icon(Icons.arrow_back),
+        //   onPressed: () {
+        //     if (context.canPop()) {
+        //       context.pop();
+        //     } else {
+        //       context.go(Routes.home);
+        //     }
+        //   },
+        // ),
+      ),
+        //backgroundColor: const  //const Color.fromARGB(255, 255, 255, 255),
         body: Builder(
           builder: (context) {
             if (_hasPermissions) {
@@ -81,7 +95,7 @@ class _CompassPageState extends State<CompassPage> {
               'assets/images/compass.png',
               // height: 200.widthMultiplier,
               // width: 200.widthMultiplier,
-              color: Colors.white,
+              color: const Color.fromARGB(255, 0, 0, 0),
               fit: BoxFit.fill,
               
             ),
