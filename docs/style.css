@@ -1,0 +1,90 @@
+:root {
+  --primary: #4285f4;
+  --secondary: #34a853;
+  --dark: #202124;
+  --light: #f8f9fa;
+}
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  margin: 0;
+  padding: 0;
+  background-color: var(--light);
+}
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.app-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+h1 {
+  margin: 0.5rem 0;
+  font-size: 2.5rem;
+}
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+.cta-button {
+  display: inline-block;
+  background-color: white;
+  color: var(--primary);
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+.screenshot {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--dark);
+  color: white;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .screenshot {
+    max-width: 100%;
+  }
+}
