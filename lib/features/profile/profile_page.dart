@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:multitool/widgets/bottom_nav_bar.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -15,9 +16,7 @@ class _ProfilePageState extends State<ProfilePage> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text(title),
-          content: SingleChildScrollView(
-            child: Text(content),
-          ),
+          content: SingleChildScrollView(child: Text(content)),
           actions: <Widget>[
             TextButton(
               child: const Text('Close'),
@@ -34,9 +33,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile'),
-      ),
+      appBar: AppBar(title: const Text('Profile')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -55,16 +52,24 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(height: 40),
             SizedBox(
               width: 200,
-              child: ElevatedButton(
-                onPressed: () {
-                  _showLegalDialog(
-                    context,
-                    'Privacy Policy',
-                    'Privacy policy content will be loaded here. You can replace this with your HTML content later.',
-                  );
-                },
-                child: const Text('Privacy Policy'),
+              child: SizedBox(
+                width: 200,
+                child: ElevatedButton(
+                  onPressed: _launchPrivacyPolicy,
+                  child: const Text('Privacy Policy'),
+                ),
               ),
+
+              // ElevatedButton(
+              //   onPressed: () {
+              //     _showLegalDialog(
+              //       context,
+              //       'Privacy Policy',
+              //       'Privacy policy content will be loaded here. You can replace this with your HTML content later.',
+              //     );
+              //   },
+              //   child: const Text('Privacy Policy'),
+              // ),
             ),
             const SizedBox(height: 20),
             SizedBox(
@@ -85,5 +90,16 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
       bottomNavigationBar: const AppBottomNavBar(currentIndex: 2),
     );
+  }
+
+  void _launchPrivacyPolicy() async {
+    final Uri url = Uri.parse(
+      'https://pruthviraj-guddu.github.io/multitool/privacyPolicy.html',
+    );
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url, );
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
