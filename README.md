@@ -19,6 +19,7 @@ sudo rm -rf android/build/
 sudo rm -rf android/local.properties
 sudo rm -rf android/.kotlin
 sudo rm -rf android/app/.cxx/Debug/*
+sudo rm -rf android/app/.cxx/*
 
 cd android
 ./gradlew clean
