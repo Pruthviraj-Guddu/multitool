@@ -16,22 +16,22 @@ class AppBottomNavBar extends StatelessWidget {
       currentIndex: currentIndex,
       onTap: (index) {
         switch (index) {
+          // case 0:
+          //   context.go(Routes.home);
+          //   break;
           case 0:
-            context.go(Routes.home);
-            break;
-          case 1:
             context.go(Routes.pomodoro);
             break;
-          case 2:
+          case 1:
             context.go(Routes.compass);
             break;
         }
       },
       items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
-        ),
+        // BottomNavigationBarItem(
+        //   icon: Icon(Icons.home),
+        //   label: 'Home',
+        // ),
         BottomNavigationBarItem(
           icon: Icon(Icons.timer),
           label: 'Pomodoro',

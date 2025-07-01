@@ -7,13 +7,14 @@ import 'package:multitool/home_page.dart';
 
 class AppRouter {
   final GoRouter router = GoRouter(
+    initialLocation:Routes.pomodoro ,
     routes: <RouteBase>[
-      GoRoute(
-        path: Routes.home,
-        builder: (BuildContext context, GoRouterState state) {
-          return const HomePage();
-        },
-      ),
+      // GoRoute(
+      //   path: Routes.home,
+      //   builder: (BuildContext context, GoRouterState state) {
+      //     return const HomePage();
+      //   },
+      // ),
       GoRoute(
         path: Routes.pomodoro,
         name: 'pomodoro',

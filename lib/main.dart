@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:multitool/widgets/responsive_wrapper.dart';
-// import 'package:go_router/go_router.dart';
-// import 'features/pomodoro/pomodoro_page.dart';
 import 'routes/app_router.dart';
+
 void main() {
   runApp(const MyApp());
 }

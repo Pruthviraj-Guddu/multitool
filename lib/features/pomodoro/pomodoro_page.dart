@@ -86,16 +86,16 @@ class _PomodoroPageState extends State<PomodoroPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Pomodoro Timer'),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            if (context.canPop()) {
-              context.pop();
-            } else {
-              context.go(Routes.home);
-            }
-          },
-        ),
+        // leading: IconButton(
+        //   icon: const Icon(Icons.arrow_back),
+        //   onPressed: () {
+        //     if (context.canPop()) {
+        //       context.pop();
+        //     } else {
+        //       context.go(Routes.home);
+        //     }
+        //   },
+        // ),
       ),
       
       body: Center(
@@ -214,7 +214,7 @@ class _PomodoroPageState extends State<PomodoroPage> {
         ),
         
       ),
-      bottomNavigationBar: const AppBottomNavBar(currentIndex: 1),
+      bottomNavigationBar: const AppBottomNavBar(currentIndex: 0),
       
     );
   }

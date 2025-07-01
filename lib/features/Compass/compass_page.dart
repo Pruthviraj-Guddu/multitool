@@ -45,7 +45,7 @@ class _CompassPageState extends State<CompassPage> {
             }
           },
         ),
-        bottomNavigationBar: const AppBottomNavBar(currentIndex: 2),
+        bottomNavigationBar: const AppBottomNavBar(currentIndex: 1),
       ),
       
     );

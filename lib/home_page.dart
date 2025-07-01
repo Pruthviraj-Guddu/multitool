@@ -6,6 +6,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // context.go(Routes.pomodoro);
     return Scaffold(
       appBar: AppBar(title: const Text('MultiTool')),
       body: const Center(child: Text('Home Content')),
