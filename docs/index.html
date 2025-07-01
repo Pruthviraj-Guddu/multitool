@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MultiTool - All-in-One Utility App</title>
+    <style>
+      :root {
+        --primary: #4285f4;
+        --secondary: #34a853;
+        --dark: #202124;
+        --light: #f8f9fa;
+      }
+      body {
+        font-family: "Segoe UI", Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--dark);
+        margin: 0;
+        padding: 0;
+        background-color: var(--light);
+      }
+      header {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        text-align: center;
+        padding: 3rem 1rem;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .app-icon {
+        width: 120px;
+        height: 120px;
+        border-radius: 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+      }
+      h1 {
+        margin: 0.5rem 0;
+        font-size: 2.5rem;
+      }
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: white;
+        color: var(--primary);
+        padding: 12px 24px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 1rem 0;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      .feature-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 1.5rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+      .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--primary);
+      }
+      .screenshot {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 1rem;
+      }
+      footer {
+        text-align: center;
+        padding: 2rem;
+        background-color: var(--dark);
+        color: white;
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+        .screenshot {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <!-- Replace with your actual app icon -->
+        <img
+          src="../assets/images/appIcon.png"
+          alt="MultiTool App Icon"
+          class="app-icon"
+        />
+        <h1>MultiTool</h1>
+        <p class="subtitle">
+          Your all-in-one utility app for productivity and daily tools
+        </p>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.pruthviraj.multitool"
+          class="cta-button"
+        >
+          Download on Google Play
+        </a>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="feature-card">
+        <div class="feature-icon">⏱️</div>
+        <h2>Pomodoro Timer</h2>
+        <p>
+          Boost your productivity with our customizable Pomodoro timer. Set work
+          and break intervals that fit your workflow, with clear visual
+          indicators and easy controls.
+        </p>
+        <!-- <div style="text-align: center;">
+               
+                <img src="pomodoro_screenshot.png" alt="Pomodoro Timer" class="screenshot">
+            </div> -->
+      </section>
+
+      <section class="feature-card">
+        <div class="feature-icon">🧭</div>
+        <h2>Digital Compass</h2>
+        <p>
+          Never lose your direction with our accurate digital compass. Simple,
+          elegant interface with real-time heading display.
+        </p>
+        <!-- <div style="text-align: center;">
+                <img src="compass_screenshot.png" alt="Digital Compass" class="screenshot">
+            </div> -->
+      </section>
+
+      <section class="feature-card">
+        <h2>More Tools Coming Soon!</h2>
+        <p>
+          MultiTool will continue growing with new useful utilities in future
+          updates. Have suggestions? We'd love to hear them!
+        </p>
+        <p>Current roadmap includes:</p>
+        <ul>
+          <li>Unit Converter</li>
+          <li>Flashlight</li>
+          <li>Level Tool</li>
+          <li>And more!</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 MultiTool App by Pruthviraj</p>
+        <p>
+          <a href="privacyPolicy.html" style="color: white">Privacy Policy</a> |
+          <a href="termsAndCondition.html" style="color: white"
+            >Terms of Service</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
