@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:multitool/routes/routes.dart';
 import 'package:multitool/widgets/bottom_nav_bar.dart';
 
 class PomodoroPage extends StatefulWidget {

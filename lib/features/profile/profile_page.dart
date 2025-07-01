@@ -10,7 +10,6 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-
   void _launchPrivacyPolicy() async {
     final Uri url = Uri.parse(
       'https://pruthviraj-guddu.github.io/multitool/privacyPolicy.html',
@@ -33,28 +32,6 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
-
-
-  void _showLegalDialog(BuildContext context, String title, String content) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(title),
-          content: SingleChildScrollView(child: Text(content)),
-          actions: <Widget>[
-            TextButton(
-              child: const Text('Close'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,12 +52,11 @@ class _ProfilePageState extends State<ProfilePage> {
             // const SizedBox(height: 10),
             // const Text('user@example.com'),
             const SizedBox(height: 40),
-            
+
             SizedBox(
               width: 200,
               child: SizedBox(
                 width: 200,
-                
                 child: ElevatedButton(
                   onPressed: _launchPrivacyPolicy,
                   child: const Text('Privacy Policy'),
@@ -101,14 +77,13 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(height: 20),
             SizedBox(
               width: 200,
-              child: 
-              SizedBox(
-              width: 200,
-              child: ElevatedButton(
-                onPressed: _launchTermsAndConditions,
-                child: const Text('Terms & Conditions'),
+              child: SizedBox(
+                width: 200,
+                child: ElevatedButton(
+                  onPressed: _launchTermsAndConditions,
+                  child: const Text('Terms & Conditions'),
+                ),
               ),
-            ),
               // ElevatedButton(
               //   onPressed: () {
               //     _showLegalDialog(
@@ -126,6 +101,4 @@ class _ProfilePageState extends State<ProfilePage> {
       bottomNavigationBar: const AppBottomNavBar(currentIndex: 2),
     );
   }
-
-  
 }
