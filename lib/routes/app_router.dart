@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:multitool/features/compass/compass_page.dart';
 import 'package:multitool/features/pomodoro/pomodoro_page.dart';
+import 'package:multitool/features/profile/profile_page.dart';
 import 'package:multitool/routes/routes.dart';
-import 'package:multitool/home_page.dart';
 
 class AppRouter {
   final GoRouter router = GoRouter(
@@ -27,6 +27,13 @@ class AppRouter {
         name: 'compass',
         builder: (BuildContext context, GoRouterState state) {
           return const CompassPage();
+        },
+      ),
+      GoRoute(
+        path: Routes.profile,
+        name: 'profile',
+        builder: (BuildContext context, GoRouterState state) {
+          return const ProfilePage();
         },
       ),
     ],
